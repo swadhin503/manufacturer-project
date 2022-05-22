@@ -1,0 +1,50 @@
+[
+    {
+      "name": "COLORFUL SL500 256GB SSD",
+      "picture": "https://i.ibb.co/z2sbXmp/parts-1.jpg",
+      "price": 452,
+      "description": "SS Productions will be your first choice If you want to buy Colorful SL500 SSD, Because we sale only Colorful authorized original SSD.",
+      "minOrder": 500,
+      "available": 10000
+    },
+    {
+      "name": "MSI GeForce RTX 3060 Ti VENTUS 2X OC 8GB GDDR6 Graphics Card",
+      "picture": "https://i.ibb.co/CKRtLrJ/MSI-Ge-Force-RTX-3060-Ti-VENTUS-2-X-OC-8-GB-GDDR6-Graphics-Card.jpg",
+      "price": 23,
+      "description": "SS Productions will be your first choice If you want to buy MSI GeForce RTX 3060 Ti VENTUS 2X OC Graphics Card in Bangladesh, Because we sale only MSI authorized original Graphics Card.",
+      "minOrder": 1000,
+      "available": 30000
+    },
+    {
+      "name": "Crucial 16GB DDR4 3200MHz Desktop RAM",
+      "picture": "https://i.ibb.co/phV3rLx/Crucial-16-GB-DDR4-3200-MHz-Desktop-RAM.jpg",
+      "price": 251,
+      "description": "SS Productions will be your first choice If you want to buy Crucial 16GB DDR4 3200MHz Desktop RAM, Because we sale only Crucial authorized original RAM.",
+      "minOrder": 500,
+      "available": 20000
+    },
+    {
+      "name": "Value Top B708 Gaming Casing",
+      "picture": "https://i.ibb.co/PDvyfVH/Value-Top-B708-Micro-ATX-Gaming-Casing.jpg",
+      "price": 484,
+      "description": "SS Productions will be your first choice If you want to buy Value Top B708 Casing, Because we sale only Value Top authorized original Casing.",
+      "minOrder": 1000,
+      "available": 20000
+    },
+    {
+      "name": "Antec NX800 Mid Tower White Gaming Case",
+      "picture": "https://i.ibb.co/tCQFXzZ/Antec-NX800-Mid-Tower-White-Gaming-Case.jpg",
+      "price": 480,
+      "description": "SS Productions will be your first choice If you want to buy Antec NX800 Mid Tower White Gaming Case, Because we sale only Value Top authorized original Casing.",
+      "minOrder": 500,
+      "available": 10000
+    },
+    {
+      "name": "Asus Dual GeForce RTX 2060 EVO OC Edition 6GB GDDR6 Graphics Card",
+      "picture": "https://i.ibb.co/Ltg0w1W/Asus-Dual-Ge-Force-RTX-2060-EVO-OC-Edition-6-GB-GDDR6-Graphics-Card.jpg",
+      "price": 699,
+      "description": "SS Productions will be your first choice If you want to buy Asus Dual GeForce RTX 2060 EVO OC Edition 6GB GDDR6 Graphics Card, Because we sale only Value Top authorized original Casing.",
+      "minOrder": 500,
+      "available": 10000
+    }
+  ]
