@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const navList = <>
                       <li><Link to='/'>HOME</Link></li>
-                      <li><Link  to='/parts'>PARTS</Link></li>
-                      <li><Link  to='/business'>BUSINESS SUMMARY</Link></li>
+                      <li><Link  to='/parts'>PRODUCTS</Link></li>
                       <li><Link  to='/reviews'>REVIEWS</Link></li>
                       <li><Link  to='/login'>LOGIN</Link></li>
                     </>
