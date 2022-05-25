@@ -1,26 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
+
 
 const SignUp = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
+    // const [info,setInfo]= useState();
     const [
         createUserWithEmailAndPassword,
         user1,
         loading1,
         error1,
       ] = useCreateUserWithEmailAndPassword(auth);
-    
+      const [token] = useToken(user||user1);
     const navigate = useNavigate();
 
     if(user || user1){
         navigate('/');
+        
+    }
+    // console.log(userInfo);
+    if(user){
+      const allInfos = {
+        name: user?.user?.displayName,
+        email:user?.user?.email
+      }
+      // console.log(info)
+      // console.log(allInfos);
+  
+      fetch('http://localhost:5000/user',{
+            method:'POST', 
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(allInfos)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+        })
     }
 
     let errorElement;
@@ -33,9 +58,30 @@ const SignUp = () => {
     }
 
     const onSubmit = data => {
-        console.log(data);
         createUserWithEmailAndPassword(data.email, data.password);
+        const userInfo = { 
+          name: data?.name,
+          email: data?.email,
+          phone: data?.phone
+        }
+    
+        fetch('http://localhost:5000/user',{
+              method:'POST', 
+              headers:{
+                  'content-type': 'application/json'
+              },
+              body: JSON.stringify(userInfo)
+          })
+          .then(res=>res.json())
+          .then(data=>{
+              console.log(data)
+          })
     }
+    // console.log(user)
+      const handleSignIn=() => {
+        signInWithGoogle()
+          
+        }
     return (
         <div className="flex justify-center items-center h-screen my-10">
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -107,7 +153,7 @@ const SignUp = () => {
                 <p className="text-primary mt-3">Already have an account? <Link className="text-accent font-bold" to="/login">Login</Link></p>
                 <div className="divider">OR</div>
 
-                <button className="btn btn-outline btn-accent " onClick={() => signInWithGoogle()}>Continue With Google</button>
+                <button className="btn btn-outline btn-accent " onClick={handleSignIn}>Continue With Google</button>
 
             </div>
          </div>
