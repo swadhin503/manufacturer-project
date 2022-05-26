@@ -16,6 +16,8 @@ const Navbar = () => {
     const navList = <>
                       <li><Link to='/'>HOME</Link></li>
                       <li><Link  to='/parts'>PRODUCTS</Link></li>
+                      <li><Link  to='/blogs'>BLOGS</Link></li>
+                      <li><Link  to='/myPortfolio'>MY PORTFOLIO</Link></li>
                       {
                           user ?
                           <>
