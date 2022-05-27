@@ -55,7 +55,6 @@ const Purchase = () => {
           phone: formData.phone,
           total:price
         }
-        console.log(orderDetails)
         fetch('http://localhost:5000/order',{
               method:'POST', 
               headers:{

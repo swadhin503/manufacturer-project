@@ -7,7 +7,7 @@ const ManageOrders = () => {
     if(isLoading){
         return <Loading></Loading>
     }
-    console.log(orders)
+    
     return (
         <div>
             <h1 className="text-center text-5xl font-bold text-primary my-5">Manage All Orders</h1>
@@ -39,7 +39,7 @@ const ManageOrders = () => {
                     }
                     </tbody>
                 </table>
-                </div>
+            </div>
         </div>
     );
 };

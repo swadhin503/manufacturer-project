@@ -26,6 +26,7 @@ import Navbar from './Pages/Shared/Navbar';
 function App() {
   return (
     <div>
+      <ToastContainer/>
       <Navbar></Navbar>
      <Routes>
        
