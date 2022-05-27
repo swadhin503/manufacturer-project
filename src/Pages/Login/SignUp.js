@@ -22,31 +22,11 @@ const SignUp = () => {
       const [token] = useToken(user||user1);
     const navigate = useNavigate();
 
-    if(user || user1){
+    if(token){
         navigate('/');
         
     }
-    // console.log(userInfo);
-    if(user){
-      const allInfos = {
-        name: user?.user?.displayName,
-        email:user?.user?.email
-      }
-      // console.log(info)
-      // console.log(allInfos);
   
-      fetch('http://localhost:5000/user',{
-            method:'POST', 
-            headers:{
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(allInfos)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-        })
-    }
 
     let errorElement;
     if(error || error1){
@@ -59,23 +39,6 @@ const SignUp = () => {
 
     const onSubmit = data => {
         createUserWithEmailAndPassword(data.email, data.password);
-        const userInfo = { 
-          name: data?.name,
-          email: data?.email,
-          phone: data?.phone
-        }
-    
-        fetch('http://localhost:5000/user',{
-              method:'POST', 
-              headers:{
-                  'content-type': 'application/json'
-              },
-              body: JSON.stringify(userInfo)
-          })
-          .then(res=>res.json())
-          .then(data=>{
-              console.log(data)
-          })
     }
     // console.log(user)
       const handleSignIn=() => {
