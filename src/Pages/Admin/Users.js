@@ -10,7 +10,7 @@ const Users = () => {
     }
     return (
         <div>
-            <h1 className="text-center text-5xl">All Users{data.length}</h1>
+            <h1 className="text-center text-5xl text-primary my-5 font-bold">All Users</h1>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
