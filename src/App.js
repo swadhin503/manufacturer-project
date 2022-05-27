@@ -1,7 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import AddProduct from './Pages/Admin/AddProduct';
 import ManageOrders from './Pages/Admin/ManageOrders';
+import ManageProduct from './Pages/Admin/ManageProduct';
 import Users from './Pages/Admin/Users';
 import Blogs from './Pages/Blogs/Blogs';
 import AddReview from './Pages/Dashboard/AddReview';
@@ -36,7 +38,7 @@ function App() {
        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
 
-
+        {/* For Users */}
        <Route path="/purchase/:id" element={
          <RequireAuth>
            <Purchase></Purchase>
@@ -44,16 +46,31 @@ function App() {
        }>
        </Route>
 
+
+       {/* Dashboard Nested Route */}
+       {/* For all valid users */}
        <Route path="/dashboard" element={
          <RequireAuth>
            <Dashboard></Dashboard>
          </RequireAuth>
        }>
+
          <Route index element={<MyProfile></MyProfile>}></Route>
+
          <Route path="/dashboard/addReview" element={<AddReview></AddReview>}></Route>
+
          <Route path="/dashboard/orders" element={<MyOrders></MyOrders>}></Route>
+
+
+
+        {/* For Admins */}
          <Route path="/dashboard/users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+
          <Route path="/dashboard/manageOrders" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
+
+         <Route path="/dashboard/addProduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+
+         <Route path="/dashboard/manageProduct" element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
        </Route>
        
      </Routes>

@@ -23,12 +23,27 @@ const Dashboard = () => {
                     {!admin && 
                     <>
                     <li><Link class="btn btn-ghost  text-primary mt-3" to="/dashboard/orders">My Orders</Link></li>
+
                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/addReview">Add a Review</Link></li>
                     </>}
+
+
                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard">My Profile</Link></li>
+
                     
-                    {admin && <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/users">All Users</Link></li>}
-                    {admin && <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/manageOrders">Manage Orders</Link></li>}
+                    {admin &&
+                    <>
+                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/users">All Users</Link></li>
+
+                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/manageOrders">Manage Orders</Link></li>
+
+                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/addProduct">Add product</Link></li>
+
+                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/manageProduct">Manage products</Link></li>
+
+                     </>
+                     }
+                    
                 </ul>
             
             </div>
