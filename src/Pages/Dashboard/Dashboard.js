@@ -28,6 +28,7 @@ const Dashboard = () => {
                     <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard">My Profile</Link></li>
                     
                     {admin && <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/users">All Users</Link></li>}
+                    {admin && <li><Link class="btn btn-ghost text-primary mt-3" to="/dashboard/manageOrders">Manage Orders</Link></li>}
                 </ul>
             
             </div>
