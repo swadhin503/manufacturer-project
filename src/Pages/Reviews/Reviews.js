@@ -5,18 +5,9 @@ const Reviews = () => {
         <div>
             <h1 className="text-center text-5xl my-5 font-bold text-primary">Customer Reviews</h1>
             <div className="flex justify-content items-center ">
-                <div>
-                    <div class="rating">
-                        <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                        <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                        <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                        <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                        <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                    </div>
-                   <div>
-                   <textarea class="textarea textarea-accent" placeholder="Bio"></textarea>
-                   </div>
-                </div>
+            {/* <div className="rating rating-sm inline">
+                {[...Array(5)].map((rat, ind) => <input key={ind} type="radio" name="rating-2" className={`mask mask-star-2 ${rev.rating >= ind + 1 ? "bg-orange-600" : "bg-orange-300"}`} />)}
+                </div> */}
             </div>
         </div>
     );

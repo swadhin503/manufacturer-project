@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 const ProductRow = ({product,index,refetch}) => {
     const deleteProduct = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
+        console.log(product._id)
         if(proceed){
             fetch(`http://localhost:5000/parts/${product._id}`,{
             method: 'DELETE'

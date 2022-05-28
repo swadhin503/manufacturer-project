@@ -16,13 +16,12 @@ const Purchase = () => {
    )
 
     const [user] = useAuthState(auth);
-    // console.log(id);
-    // console.log(user?.displayName);
+    
    if(isLoading){
        <Loading></Loading>
    }
    
-   const { register, formState: { errors }, handleSubmit,reset,setValue } = useForm();
+   const { register, formState: { errors }, handleSubmit } = useForm();
 
    const onSubmit = formData => {
       
